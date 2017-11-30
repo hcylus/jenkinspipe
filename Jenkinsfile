@@ -1,5 +1,9 @@
+#!/usr/bin/env groovy
+
 pipeline {
-    agent { docker 'python:2.7' }
+    agent { 
+        docker { image 'python:2.7' }
+    }
     stages {
         stage('build') {
             steps {
